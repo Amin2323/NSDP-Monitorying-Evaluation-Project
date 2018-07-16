@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login - Error encountered</title>
+  <link href="libs/bootstrap-1.3.0/bootstrap.min.css" rel="stylesheet">
+  <link href="app/app.css" rel="stylesheet">
+  
+  <style type="text/css">
+  
+    .login-wrapper {
+        width: 500px;
+        background-color: #F9F9F9;
+        border-radius: 15px;    
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        border: 1px solid #f9f9f9;
+        border-bottom: 1px solid #a3a3a3;
+        -webkit-box-shadow: 0px 1px 9px rgba(96, 50, 50, 0.7);
+        -moz-box-shadow:    0px 1px 9px rgba(96, 50, 50, 0.7);
+        box-shadow:         0px 1px 9px rgba(96, 50, 50, 0.7);      
+        font-family: arial; 
+    }
+  </style>
+</head>
+
+<body>
+    <br /><br /><br /><br />
+    <div class="login-wrapper">
+        <h5>Login here</h5>
+        <form method="POST" action="/more/j_spring_security_check" id="loginForm">
+            <table style="width: 100%" id="loginTable">
+                <tr>
+                    <td colspan="2" style="color: red; font-family: arial">
+                        Invalid username or password supplied. Please try again.<br /></td>
+                </tr>            
+                <tr>
+                    <td><label for="username" style="padding-right: 20px;">Username</label></td>
+                    <td><input id="username" name="j_username" type="text"  style="width: 100%"/></td>
+                </tr>
+                <tr>
+                    <td><label for="password" style="padding-right: 20px;">Password</label></td>
+                    <td><input id="password" name="j_password" type="password"  style="width: 100%"/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="right">
+                        <span style="float: left;"><a href="/more/resources/forgotPassword.html">Forgot Password?</a></span>
+                        <input style="float: right;" name="commit" type="submit" value="Sign In" class="btn primary"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript">
+    document.getElementById("username").focus();
+    </script>
+</body>
+</html>
